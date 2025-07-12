@@ -1,4 +1,4 @@
-# SLAM and Path Planning with TurtleBot3
+# SLAM and Path Planning
 
 This file documents my learning and implementation journey with **ROS2**, **TurtleBot3**, **SLAM**, and **Path Planning** using simulation tools like **Gazebo** and **RViz**.
 
