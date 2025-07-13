@@ -54,6 +54,10 @@ This file documents my learning and implementation journey with **ROS2**, **Turt
 | CPU Load (avg)      | Lower             | Slightly Higher    |
 | Path Shape          | Direct            | Conservative       |
 
+> A* was generally faster and produced more direct paths in both environments.
+**Why?**  
+A* uses a heuristic (usually Euclidean or Manhattan distance to the goal) to guide the search, allowing it to prioritize more promising paths. This results in faster planning and often shorter routes.  
+In contrast, Dijkstra is a greedy, uniform-cost algorithm — it explores all directions equally without considering proximity to the goal, making it slower and less efficient in larger maps.
 ---
 
 ### 🔁 Local Planner Comparison: DWB vs Regulated Pure Pursuit (RPP)
