@@ -49,7 +49,7 @@ This file documents my learning and implementation journey with **ROS2**, **Turt
 
 | Metric              | A*                | Dijkstra           |
 |---------------------|-------------------|--------------------|
-| Planning Time       | -----             | ------             |
+| Planning Time       | -----             | -----              |
 | Path Length         | 4.3 m             | 4.5 m              |
 | CPU Load (avg)      | Lower             | Slightly Higher    |
 | Path Shape          | Direct            | Conservative       |
