@@ -65,8 +65,8 @@ This file documents my learning and implementation journey with **ROS2**, **Turt
 | CPU Load            | Higher                       | Lower                              |
 | Tuning Complexity   | High (critics, weights, etc) | Low (fewer parameters)             |
 
-> DWB provided better control in tight areas but is harder to configure.  
-> RPP worked well in open space and was easier to configure.
+> DWB provided better control in tight areas and with dynamic obstacles but is harder to configure.  
+> RPP worked well in open space and was easier to configure, but is used with primarily static obstacles and simple scenarios. 
 
 --
 
