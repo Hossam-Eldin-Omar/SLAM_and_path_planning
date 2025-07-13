@@ -71,7 +71,7 @@ This file documents my learning and implementation journey with **ROS2**, **Turt
 --
 
 - All benchmarks were collected using `/planner_server` and `/controller_server` in Nav2 stack.
-- Timing was measured using `ros2 topic echo /plan` + simulation logs.
+- Timing was measured using simulation logs.
 
 ---
 
