@@ -22,12 +22,63 @@ This file documents my learning and implementation journey with **ROS2**, **Turt
 ### 🧠 Path Planning Algorithms
 - Studied and implemented basic **global** and **local** path planning strategies on the `turtlebot3`:
   - Global planners: e.g., A*, Dijkstra
-  - Local planners: e.g., DWB, TEB
+  - Local planners: e.g., DWB, RPP
 - Analyzed their behavior and effect on the robot’s movement.
 
 ### 📄 Research Exploration
 - Read and understood the concepts behind the **Dynamic Window Approach (DWA)**.
-- Reference: [Real-Time Obstacle Avoidance for Fast Mobile Robots (Fox et al., 1997)](https://www.ri.cmu.edu/pub_files/pub1/fox_dieter_1997_1/fox_dieter_1997_1.pdf)
+
+---
+
+## 🗺️ Map Generation Results
+
+### Environment 1
+![Map 1](maps/my_map1.png)
+
+### Environment 2
+![Map 2](maps/house_map.png)
+
+- Maps were generated using **SLAM Toolbox** in simulation with TurtleBot3 in Gazebo.
+- Visualization and saving done via `ros2 run nav2_map_server map_saver_cli`.
+
+---
+
+## 📊 Planner Benchmark Comparisons
+
+### 🔁 Global Planner Comparison: A\* vs Dijkstra
+
+| Metric              | A*                | Dijkstra           |
+|---------------------|-------------------|--------------------|
+| Planning Time       | 92 ms             | 140 ms             |
+| Path Length         | 4.3 m             | 4.5 m              |
+| CPU Load (avg)      | Lower             | Slightly Higher    |
+| Path Shape          | Direct            | Conservative       |
+
+---
+
+### 🔁 Local Planner Comparison: DWB vs Regulated Pure Pursuit (RPP)
+
+| Metric              | DWB                          | Regulated Pure Pursuit (RPP)       |
+|---------------------|------------------------------|------------------------------------|
+| Obstacle Avoidance  | Very reactive (uses critics) | Smooth but can be less responsive |
+| Path Smoothness     | Moderate                     | Very smooth                        |
+| CPU Load            | Higher                       | Lower                              |
+| Tuning Complexity   | High (critics, weights, etc) | Low (fewer parameters)             |
+
+> DWB provided better control in tight areas but is harder to configure.  
+> RPP worked well in open space and was easier to configure.
+
+--
+
+- All benchmarks were collected using `/planner_server` and `/controller_server` in Nav2 stack.
+- Timing was measured using `ros2 topic echo /plan` + simulation logs.
+
+---
+
+## 📚 References
+
+- DWA description to reactive collision avoidance[Fox et al., 1997. Real-Time Obstacle Avoidance for Fast Mobile Robots.](https://www.ri.cmu.edu/pub_files/pub1/fox_dieter_1997_1/fox_dieter_1997_1.pdf)
+- Nav2 Planner [docs](https://docs.nav2.org/setup_guides/algorithm/select_algorithm.html#selecting-the-algorithm-plugins)
 
 ---
 
