@@ -42,7 +42,49 @@ This file documents my learning and implementation journey with **ROS2**, **Turt
 - Visualization and saving done via `ros2 run nav2_map_server map_saver_cli`.
 
 ---
+## 🧠 Visual SLAM with RTAB-Map
 
+After working with `slam_toolbox`, I experimented with the [**rtabmap_ros**](https://github.com/introlab/rtabmap_ros) package to gain hands-on experience with **Visual SLAM (vSLAM)**.
+
+### 🧪 Setup & Integration
+
+- 🔁 **Repository cloned from:**  
+  [`https://github.com/introlab/rtabmap_ros`](https://github.com/introlab/rtabmap_ros)
+
+- 🤖 **Robot Platform:**  
+  Integrated with the **CHAMP quadruped robot** in **Gazebo** and **RViz** under ROS2.
+
+- 🎥 **Sensor Configuration:**  
+  - **LiDAR**: Used for 2D obstacle detection  
+  - **RGB-D Camera**: Used for 3D perception and feature-based mapping
+
+### 🗺️ Visual SLAM Insights
+
+- RTAB-Map builds maps by combining:
+  - Visual features (from the camera)
+  - Odometry (wheel/IMU)
+  - Optional LiDAR data
+
+- Loop closure detection is based on **appearance similarity** between previously seen images, making it well-suited for **large indoor environments**.
+
+- Unlike `slam_toolbox`, RTAB-Map:
+  - Creates **richer 3D maps** (if desired)
+  - Enables **loop closure** to correct drift
+  - Depends on **textured environments** for feature detection
+
+### 💡 Key Takeaways
+
+- ✔️ **Ideal use cases**:
+  - When LiDAR coverage is sparse
+  - Environments with strong visual features (e.g., walls with posters, furniture, textures)
+
+- ⚙️ **Requires**:
+  - Careful camera calibration (intrinsics + extrinsics)
+  - Proper sync between image + depth + odometry topics
+
+- 🔁 **Strength**:  
+  Loop closure greatly improves long-term localization and mapping consistency
+---
 ## 📊 Planner Benchmark Comparisons
 
 ### 🔁 Global Planner Comparison: A\* vs Dijkstra
