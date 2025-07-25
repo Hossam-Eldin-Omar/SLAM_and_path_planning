@@ -42,7 +42,7 @@ This file documents my learning and implementation journey with **ROS2**, **Turt
 - Visualization and saving done via `ros2 run nav2_map_server map_saver_cli`.
 
 ---
-## 🧠 Visual SLAM with RTAB-Map
+## 🧠 Visual SLAM with RTAB-Map (Real-Time Appearance-Based Mapping)
 
 After working with `slam_toolbox`, I experimented with the [**rtabmap_ros**](https://github.com/introlab/rtabmap_ros) package to gain hands-on experience with **Visual SLAM (vSLAM)**.
 
@@ -63,7 +63,7 @@ After working with `slam_toolbox`, I experimented with the [**rtabmap_ros**](htt
 - RTAB-Map builds maps by combining:
   - Visual features (from the camera)
   - Odometry (wheel/IMU)
-  - Optional LiDAR data
+  - LiDAR data
 
 - Loop closure detection is based on **appearance similarity** between previously seen images, making it well-suited for **large indoor environments**.
 
