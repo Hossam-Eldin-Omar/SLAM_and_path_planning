@@ -10,29 +10,28 @@ This guide walks you through creating a ROS 2 workspace, pulling this repository
 
 ---
 
-### 📁 1. Create a ROS 2 Workspace
-
+📁 1. Create a ROS 2 Workspace
 ```bash
 mkdir -p ~/nav2_ws
 cd ~/nav2_ws
-### ⬇️ 2. Clone this repo
+⬇️ 2. Clone this repo
 ```bash
 git clone https://github.com/Hossam-Eldin-Omar/SLAM_and_path_planning.git
 
-### 🔨 3. Build the Workspace
+🔨 3. Build the Workspace
 ```bash
 cd ~/nav2_ws
 colcon build
 source install/setup.bash
 
-### 🐢 4. Launch TurtleBot3 in Gazebo
+🐢 4. Launch TurtleBot3 in Gazebo
 ```bash
 export TURTLEBOT3_MODEL=burger
 
 ### Launch Gazebo simulation
 ros2 launch turtlebot3_gazebo turtlebot3_my_house_world.launch.py
 
-###🗺️ 5. Launch Navigation2 with Your Map
+🗺️ 5. Launch Navigation2 with Your Map
 ```bash
 cd ~/nav2_ws
 source install/setup.bash
