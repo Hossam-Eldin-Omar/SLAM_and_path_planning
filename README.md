@@ -11,8 +11,10 @@ This guide walks you through creating a ROS 2 workspace, pulling this repository
 ---
 ```bash
 📁 1. Create a ROS 2 Workspace
+```bash
 mkdir -p ~/nav2_ws
 cd ~/nav2_ws
+
 ⬇️ 2. Clone this repo
 ```bash
 git clone https://github.com/Hossam-Eldin-Omar/SLAM_and_path_planning.git
