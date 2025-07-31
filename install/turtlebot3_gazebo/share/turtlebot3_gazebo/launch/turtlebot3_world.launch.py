@@ -1,1 +1,0 @@
-/home/hossam-omar/nav2_ws/src/turtlebot3_gazebo/launch/turtlebot3_world.launch.py
