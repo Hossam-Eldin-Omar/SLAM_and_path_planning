@@ -16,7 +16,7 @@ cd ~/nav2_ws
 ```
 ### ⬇️ 2. Clone this repo
 ```bash
-git clone https://github.com/Hossam-Eldin-Omar/SLAM_and_path_planning.git
+git clone https://github.com/Hossam-Eldin-Omar/SLAM_and_path_planning.git .
 ```
 ### 🔨 3. Build the Workspace
 ```bash
@@ -31,7 +31,7 @@ export TURTLEBOT3_MODEL=waffle
 ```
 #### Launch Gazebo simulation
 ```bash
-ros2 launch turtlebot3_gazebo turtlebot3_my_house_world.launch.py
+ros2 launch turtlebot3_gazebo turtlebot3_my_house.launch.py
 ```
 
 ### 🗺️ 5. Launch Navigation2 with Your Map
