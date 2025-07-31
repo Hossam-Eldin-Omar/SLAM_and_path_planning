@@ -39,17 +39,17 @@ ros2 launch turtlebot3_gazebo turtlebot3_my_house.launch.py
 cd ~/nav2_ws
 source install/setup.bash
 ```
-
 #### Launch Nav2 using your provided map and localization
 ```bash
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/my_house_map.yaml
 ```
+
 ## If you want to teleoperate the turtlebot3 using the keyboard then follow the instructions below before running step number 5
 ### 🎮 1. run the turtlebot3 teleoperate node
 ```bash
 ros2 run turtlebot3_teleop teleop_keyboard
 ```
-### 🗺️ 2.run the turtlebot3 cartographer then start teleoperating the robot accross the gazebo world to generate the 2D map
+### 🗺️ 2. run the turtlebot3 cartographer then start teleoperating the robot accross the gazebo world to generate the 2D map
 ```bash
 ros2 launch turtlebot3_cartographer cartographer.launch.py
 ```
