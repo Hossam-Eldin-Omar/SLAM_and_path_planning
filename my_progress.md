@@ -58,9 +58,9 @@ After working with `slam_toolbox`, I experimented with the [**rtabmap_ros**](htt
   - **LiDAR**: Used for 2D obstacle detection  
   - **RGB-D Camera**: Used for 3D perception and feature-based mapping
 ### Hint
-when cloning and building the repo "rtabmap_ros" follow the same instuction except this one " export MAKEFLAGS="-j6" " if your ram is 16 GB or less the run this command instead:
+when cloning and building the repo "rtabmap_ros", follow the same commands and instructions except this one " export MAKEFLAGS="-j6" " if your ram is 16 GB or less then run this command instead:
 ```bash
-export MAKEFLAGS="-j6"
+export MAKEFLAGS="-j2"
 ```
 and be patient when building as it may take a lot of time to finish and **DON'T PROCEED** with downloading or buiding internal packages unless you have finished building the main ones
 
