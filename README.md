@@ -43,6 +43,8 @@ source install/setup.bash
 ```bash
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/my_house_map.yaml
 ```
+## ✅ You're Ready!
+Your TurtleBot3 should now spawn inside Gazebo and localize using the pre-built map with Navigation2.
 
 ## If you want to teleoperate the turtlebot3 using the keyboard and generate the 2D map by yourself then follow the instructions below before running step number 5
 ### 🎮 1. open a new terminal and run the turtlebot3 teleoperate node
@@ -53,8 +55,5 @@ ros2 run turtlebot3_teleop teleop_keyboard
 ```bash
 ros2 launch turtlebot3_cartographer cartographer.launch.py
 ```
-
-## ✅ You're Ready!
-Your TurtleBot3 should now spawn inside Gazebo and localize using the pre-built map with Navigation2.
 
 
