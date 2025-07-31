@@ -38,8 +38,7 @@ cd ~/nav2_ws
 source install/setup.bash
 
 # Launch Nav2 using your provided map and localization
-ros2 launch nav2_bringup localization_launch.py \
-  map:=<absolute_or_relative_path_to>/maps/my_house_map.yaml
+ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/my_house_map.yaml
 
 ✅ You're Ready!
 Your TurtleBot3 should now spawn inside Gazebo and localize using the pre-built map with Navigation2.
