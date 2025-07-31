@@ -44,7 +44,7 @@ source install/setup.bash
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/my_house_map.yaml
 ```
 
-## If you want to teleoperate the turtlebot3 using the keyboard then follow the instructions below before running step number 5
+## If you want to teleoperate the turtlebot3 using the keyboard and generate the 2D map by yourself then follow the instructions below before running step number 5
 ### 🎮 1. run the turtlebot3 teleoperate node
 ```bash
 ros2 run turtlebot3_teleop teleop_keyboard
