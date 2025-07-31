@@ -27,7 +27,7 @@ source install/setup.bash
 
 🐢 4. Launch TurtleBot3 in Gazebo
 ```bash
-export TURTLEBOT3_MODEL=burger
+export TURTLEBOT3_MODEL=waffle
 
 ### Launch Gazebo simulation
 ros2 launch turtlebot3_gazebo turtlebot3_my_house_world.launch.py
