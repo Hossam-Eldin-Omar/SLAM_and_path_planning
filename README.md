@@ -9,9 +9,8 @@ Detailed progress and planner comparisons are documented in [my_progress.md](my_
 This guide walks you through creating a ROS 2 workspace, pulling this repository, building it, and launching the TurtleBot3 simulation with Navigation2 using the provided map.
 
 ---
-
-📁 1. Create a ROS 2 Workspace
 ```bash
+📁 1. Create a ROS 2 Workspace
 mkdir -p ~/nav2_ws
 cd ~/nav2_ws
 ⬇️ 2. Clone this repo
