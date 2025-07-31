@@ -4,7 +4,7 @@ This repository contains my work on SLAM and path planning using ROS2 (Humble) a
 
 Detailed progress and planner comparisons are documented in [my_progress.md](my_progress.md).
 
-## 🚀 Step-by-Step Setup Instructions
+## 🚀 Step-by-Step Setup Instructions to use turtlebot3 in my custom world
 
 This guide walks you through creating a ROS 2 workspace, pulling this repository, building it, and launching the TurtleBot3 simulation with Navigation2 using the provided map.
 
